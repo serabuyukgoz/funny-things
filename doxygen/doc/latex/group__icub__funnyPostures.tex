@@ -1,0 +1,49 @@
+\section{funny\+Postures}
+\label{group__icub__funnyPostures}\index{funny\+Postures@{funny\+Postures}}
+
+
+A simple module that makes use of the cartesian and gaze interfaces to put the i\+Cub in ...  
+
+
+A simple module that makes use of the cartesian and gaze interfaces to put the i\+Cub in ... 
+
+funny postures upon tactile detection.\hypertarget{group__icub__iCubWriter_intro_sec}{}\subsection{Description}\label{group__icub__iCubWriter_intro_sec}
+This module obtains tactile input from the aware\+Touch module and generates specific robot gestures as response. Optionally, this module can interact with the I\+OL framework to avoid generating postures while a I\+OL action is currently being executed.\hypertarget{group__icub__iCubWriter_lib_sec}{}\subsection{Libraries}\label{group__icub__iCubWriter_lib_sec}
+
+\begin{DoxyItemize}
+\item Y\+A\+RP.
+\item cartesian and gaze I/F\textquotesingle{}s.
+\item ctrl\+Lib.
+\end{DoxyItemize}\hypertarget{group__icub__iCubWriter_parameters_sec}{}\subsection{Parameters}\label{group__icub__iCubWriter_parameters_sec}
+--name {\itshape name} 
+\begin{DoxyItemize}
+\item select the module stem-\/name.
+\end{DoxyItemize}
+
+--robot {\itshape robot} 
+\begin{DoxyItemize}
+\item select the robot name to connect to.
+\end{DoxyItemize}
+
+--context {\itshape context} 
+\begin{DoxyItemize}
+\item select the module context.
+\end{DoxyItemize}
+
+--from {\itshape file} 
+\begin{DoxyItemize}
+\item select the configuration file containing the emotions definitions.
+\end{DoxyItemize}\hypertarget{group__icub__iCubWriter_portsc_sec}{}\subsection{Ports Created}\label{group__icub__iCubWriter_portsc_sec}
+{\itshape /funny\+Postures/emotions/raw} to be connected to the robot emotions port to control the emotions.
+
+{\itshape /funny\+Postures/iol/status}\+:rpc to be connected to the I\+OL status port to know whether any ongoing action is currently being performed.
+
+{\itshape /funny\+Postures/iol/human}\+:rpc to be connected to the I\+OL input port to enable/disable attention and send speech commands.
+
+{\itshape /funny\+Postured/rpc} to be connected to the aware\+Touch module port to receive currently detected tactile input. Tactile inputs handled by this module are\+: \char`\"{}caress\char`\"{}, \char`\"{}poke\char`\"{}, \char`\"{}pinch\char`\"{}.
+
+tested\+\_\+os\+\_\+sec Tested OS Windows, Linux
+
+\begin{DoxyAuthor}{Author}
+Ugo Pattacini 
+\end{DoxyAuthor}
